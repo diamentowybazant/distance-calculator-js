@@ -1,0 +1,41 @@
+{
+  "name": "distance-calculator-js",
+  "version": "1.0.0",
+  "description": "Calculate the distance between two coordinates (points)",
+  "keywords": [
+    "points",
+    "distance",
+    "haversine",
+    "calculator",
+    "coordinates",
+    "haversine formula",
+    "distance calculator"
+  ],
+  "license": "MIT",
+  "author": "diamentowybazant",
+  "files": [
+    "lib/"
+  ],
+  "main": "./lib/cjs/calculator.js",
+  "module": "./lib/esm/calculator.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/diamentowybazant/distance-calculator-js.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
+    "test": "jest --config jest.config.js",
+    "lint": "eslint . --ext .ts",
+    "prepublishOnly": "npm run lint && npm run test",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.9",
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "eslint": "^7.6.0",
+    "jest": "^26.3.0",
+    "ts-jest": "^26.2.0",
+    "typescript": "^3.9.7"
+  }
+}
